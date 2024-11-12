@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #001f3d; /* Navy blue background */
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #ffffff; /* White background for the result box */
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 40px 50px;
+            width: 90%;
+            max-width: 600px;
+            transform: translateY(30px);
+            animation: slide-up 0.5s ease-out forwards;
+        }
+
+        h1 {
+            color: #4CAF50; /* Green color for the title */
+            font-size: 2.8em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        p {
+            font-size: 1.4em;
+            color: #555;
+            margin-top: 20px;
+            line-height: 1.5;
+        }
+
+        .prediction {
+            font-size: 2em;
+            font-weight: bold;
+            color: #2196F3; /* Blue color for the prediction */
+            margin-top: 5px;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 30px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #2F80ED; /* Navy blue button */
+            border-radius: 8px;
+            font-size: 1.2em;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        a:hover {
+            background-color: #1976D2; /* Darker blue on hover */
+            transform: scale(1.1); /* Slight zoom effect on hover */
+        }
+
+        @keyframes slide-up {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 25px;
+            }
+
+            h1 {
+                font-size: 2.2em;
+            }
+
+            p, .prediction {
+                font-size: 1.2em;
+            }
+
+            a {
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Prediction Result</h1>
+        <p class="prediction">Prediction: {{ prediction }}</p>
+        <a href="/">Back</a>
+    </div>
+</body>
+</html>
